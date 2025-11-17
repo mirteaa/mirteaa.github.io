@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Website" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>mirteaaa</title>
+
+    <!-- Link to styles (create styles.css as needed) -->
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="menu" id="menudiv">
+        <select name="menu" id="menu" onchange="redirToDestination(this)">
+          <option value="website" default selected>Website</option>
+          <option value="about">About</option>
+          <option value="portfolio">Portfolio</option>
+          <option value="shop">Shop</option>
+        </select>
+      </div>
+      <div class="information">
+        <img
+          src="https://pbs.twimg.com/profile_images/1985323427893231616/GBMSU2HU_400x400.jpg"
+          alt="my live twitter profile picture" />
+        <br />
+        <a>MIRTEAAA / <span id="bday"></span> / F</a><br />
+        <a
+          >addicted to <a href="https://x.com/Mirteaaa">twitter.com</a>, full
+          scope designer, psychology student, real, ipod-collector, locusta of
+          gaul enjoyer, emma myers lookalike.</a
+        ><br />
+        <a href="./github.html">GITHUB</a><br />
+        <a href="./portfolio.html">PORTFOLIO</a><br />
+        <a href="./connect.html">CONNECT</a><br />
+        <br /><br />
+        <a>RING</a><br />
+        <a href=""><img src="aaa.gif" /></a
+        ><a href="https://sarascafe.lenowo.org/"
+          ><img
+            src="data:image/png;base64,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" /></a
+        ><a href="https://heksevals.neocities.org/"
+          ><img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAYAAABjyArgAAAD70lEQVRoQ+2ZzU4UQRDHa0g2mBBYTEjwRkK48AYqz8Cst8WD8QLGvRjPetZ4NF7WCA8AN1meAZHA2TMJIXggBE5oTBindqzdmprq6Z7emUU+5kLY6a7696+rqqt3g047iuDuqYxAgIAXX1Zm/1Yb3voMcAe4whBQAR8cAJycAMzOAlxcABwdAczMAExPV6jkhppWAe/vA1xeAoyMJH/xGR8HmJ+/oRQqXJYK+PgY4PCw7xVBz80BTE6Wp+S6ZYmvXmMNxhKBRgnuxER5cNHSdcsSX725h9zZGUCtBjA2Vi5ctDaMLClTta/eDODgyXuAzbdlart9tsJ3EG2+6a47C7g2Cp1fvxMoqwOyWbHMl/Zt4weU4z29oM7w3ihEfxKGWcCNOII72QiOLyPdCWErUHXa3uctbpC53tA8JjrrbMQR/NUQwZrfIAiAG4/EzVq+392NnPtmm+0iHPBgPj0FmJpK+vh63b13t3UJvjqdbnI24xpg6psbwQZ0YCnFKYR12Iya3c/kXAkUx+KTZ8PkQ5/3OLb1reeGtEgb+PmHH81e768xsK1NLREuEayN4RG+txd1++bn9xO49I7mYZmhLODC11oLsNzeTplfa63HNp4abdAiNR+L8BBW2jspe/idC0YVPautRxDA64xO1JgXCPjOtjYvwLaURWHn5xE8q/fh8rqNILh4DhgXuwXfuzBpDkGi//lG8kVqPnATZeSFkEQw18FBoQbaFFMgcC2aLl5CvUqELYK1hdEcWcvTEbwRR3BT3QAX4JqPbplgB7QELLWutRIN+BQBzANhYMC2Q06K1jaExMsIxugxRTgvMRKmyYdMZSpD3EcjWPg3/VUq7XEMgpMlREat1MVLi1cEFwUsW7vk4PoUH3TbqRTmkAgAjqOUlhBltKXmG3xQCaANNtVwtEX29fLULzVSF4/8oQHm3QCmLC60E+2oXYTsN2k81mee8hKwyYcGUcsgCZIORA0w6aBzQ5YiCkIjYNmC2Jps+R5Tiw4sqmckgi9OCtPqqAZc2tR82LoAbBW1NpH8YQez3F7qHbhFdFgBh0H/NLV1Dqb3WotFqR/Bx0wLVcRPv4QkPTJv02SLhXZ5FPMUNkU32eNdhYs+6ds5gl2MZ2qRcknAqPryswkvHmQvIEV88OjULgl0keE2cRxuLB5a/H12fv8yQl2HqzauC+fk1mDb9dHFqe/3qC62hz3Gh0cu4DLg+H6POig8Hxg2nz48cgGXBafqX0c0MD4wbIB9eFjbtLLgVPnriAbGB4YNML4vysMKGI0OG47LQl3GFIXhYrMoDyfAro7/x3FXHRw3HvBVb/od4Ip3oAe4Yj+32vxf3wjM5rtrbT4AAAAASUVORK5CYII="
+        /></a>
+      </div>
+      <div class="aaa">
+        <p>&copy; <span id="year"></span> mirteaaa</p>
+      </div>
+    </main>
+
+    <script>
+      const getAge = (birthDate) =>
+        Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e10);
+      function setMenuValue() {
+        document.getElementById("menu").value = "about";
+      }
+
+      document.addEventListener("DOMContentLoaded", setMenuValue);
+      window.addEventListener("pageshow", setMenuValue);
+
+      function redirToDestination(elem) {
+        switch (elem.value) {
+          case "website":
+            window.location = "./index.html";
+            break;
+          case "about":
+            window.location = "./about.html";
+            break;
+          case "portfolio":
+            window.location = "./portfolio.html";
+            break;
+          case "Shop":
+            window.location = "./shop.html";
+            break;
+          default:
+            alert("Select letter");
+            break;
+        } //switch
+      } //function
+
+      // Small script to set the copyright year
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("bday").textContent = getAge("2003-08-15");
+    </script>
+  </body>
+</html>

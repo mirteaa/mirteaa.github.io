@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  animation: background 2s;
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  height: inherit;
+  margin: 0;
+}
+main {
+  display: flex;
+  height: 100%; /* Set a fixed height for the container */
+  display: flex; /* Enable flexbox layout */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: row;
+  @media (max-width: 1400px) {
+    flex-direction: column;
+    width: 100%;
+        overflow-y: auto;
+  }
+}
+.aaa {
+  align-self: flex-end;
+  position: sticky;
+  z-index: 1;
+    @media (max-width: 1400px) {
+    width: 100%;
+    min-height: 0;
+  }
+}
+.menu {
+  align-self: flex-start;
+  position: sticky;
+  z-index: 1;
+  @media (max-width: 1400px) {
+    width: 100%;
+    min-height: 0;
+  }
+}
+.menu select {
+  border: 2px solid transparent;
+  background: #eeeeee;
+  padding: 4px;
+  border-radius: 4px;
+  background: linear-gradient(#d8d8d8, #efefef) padding-box,
+    linear-gradient(#efefef, #d8d8d8) border-box;
+  box-shadow: inset 0 4px #fff;
+}
+.information {
+  margin: 0 10%;
+  height: 100%;
+  max-width: fit-content;
+  padding-top: 35%;
+  z-index: 0;
+  @media (max-width: 810px) {
+    margin: 0;
+    height: fit-content;
+    padding: 0;
+    max-width: 100%;
+  }
+  @media (min-width: 768px) {
+    margin: 0 10%;
+  }
+}
+a {
+  line-height: 1.6;
+}
+
+@keyframes background {
+  from {
+    background-color: #76c009;
+  }
+  to {
+    background-color: #fff;
+  }
+}

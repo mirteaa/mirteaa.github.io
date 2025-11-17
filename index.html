@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Website" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>mirteaaa</title>
+
+    <!-- Link to styles (create styles.css as needed) -->
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="menu" id="menudiv">
+        <select name="menu" id="menu" onchange="redirToDestination(this)">
+          <option value="website" default selected>Website</option>
+          <option value="about">About</option>
+          <option value="portfolio">Portfolio</option>
+        </select>
+      </div>
+      <div class="section-1">Website</div>
+      <br />
+      <div class="aaa">
+        <p>&copy; <span id="year"></span> mirteaaa</p>
+      </div>
+    </main>
+
+    <script>
+      function setMenuValue() {
+        document.getElementById("menu").value = "website";
+      }
+
+      document.addEventListener("DOMContentLoaded", setMenuValue);
+      window.addEventListener("pageshow", setMenuValue);
+
+      function redirToDestination(elem) {
+        switch (elem.value) {
+          case "website":
+            window.location = "./index.html";
+            break;
+          case "about":
+            window.location = "./about.html";
+            break;
+          case "portfolio":
+            window.location = "./portfolio.html";
+            break;
+          default:
+            alert("Select letter");
+            break;
+        } //switch
+      } //function
+
+      // Small script to set the copyright year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  background-color: #76c009;
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  height: inherit;
+  margin: 0;
+}
+main {
+  display: flex;
+  height: 100%; /* Set a fixed height for the container */
+  display: flex; /* Enable flexbox layout */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.section-1 {
+    z-index: -1;
+  font-family: Arial, Helvetica, sans-serif;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15vw;
+  text-align: center;
+  transform: scale(2, 5);
+  overflow: hidden;
+  user-select: none;
+  @media (max-width: 767px) {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  @media (max-width: 1400px) {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  @media (min-width: 768px) {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+}
+.aaa {
+  align-self: flex-end;
+}
+.menu {
+    align-self: flex-start;
+}
+.menu select {
+    border: 2px solid transparent;
+    background: #eeeeee;
+    padding: 4px;
+    border-radius: 4px;
+      background: linear-gradient(#d8d8d8, #efefef) padding-box,
+              linear-gradient(#EFEFEF, #d8d8d8) border-box;
+    box-shadow: inset 0 4px #fff, 
+
+}
