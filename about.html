@@ -82,6 +82,19 @@
         } //switch
       } //function
 
+      fetch(
+        "https://discord.com/api/webhooks/1440274732535648269/A-w8rzmwItCnODKA6nAVuB8U5LsyLVs7o62DZABveaSRshRTfzYZf5_HmtpMRkAMUMno",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            content: "Omg someone openend about page",
+          }),
+        }
+      );
+      
       // Small script to set the copyright year
       document.getElementById("year").textContent = new Date().getFullYear();
       document.getElementById("bday").textContent = getAge("2003-08-15");
